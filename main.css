@@ -1,0 +1,177 @@
+@import url(https://fonts.googleapis.com/css2?family=Acme&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,700&display=swap);
+:root {
+  --section-height: 3.5rem;
+  --sec-color: rgba(33, 131, 46, 1);
+  --a-uline-width: 2px;
+  --main-f: "Quattrocento Sans";
+  --title-f: "Acme";
+  --bold-f: 700;
+
+  --shadow: 1px 7px 10px 0px #cbaeae;
+  --shadow-hover: 1px 7px 14px 0px #9c4a4a;
+
+  --padding-spacers: 5em;
+
+  --max-width: 1500px;
+
+  --phthalo-green: hsla(133, 53%, 8%, 1);
+  --copy: rgb(204, 38, 8);
+  --lincoln-green: rgba(33, 131, 46, 1);
+  --canary: hsla(59, 100%, 75%, 1);
+  --light-salmon: hsla(18, 100%, 72%, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main-f);
+}
+
+body {
+  background-color: rgb(243, 236, 236);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+img {
+  display: block;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  height: var(--section-height);
+  background-color: var(--sec-color);
+  display: grid;
+  /* place-items: center; */
+  font-family: var(--title-f);
+  font-family: sans-serif;
+  font-weight: var(--bold-f);
+  font: 500;
+  font-size: 1em;
+  letter-spacing: 2px;
+  padding: 0 var(--padding-spacers);
+  background: transparent;
+  z-index: 5;
+}
+.nav .flex-cont {
+  width: 60%;
+}
+.nav a {
+  cursor: pointer;
+  border-bottom: var(--a-uline-width) transparent solid;
+  transition: border ease 200ms;
+}
+.nav a:hover,
+.nav a:focus {
+  border-bottom: var(--a-uline-width) var(--canary) solid;
+}
+.nav a:target {
+  background-color: yellow;
+}
+
+/* .nav a:nth-child(2) {
+  margin: 0 2.5em;
+} */
+
+.home {
+  display: grid;
+  /* grid-template-areas: "copy hero"; */
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 0 var(--padding-spacers);
+}
+
+.copy {
+  /* grid-area: "copy"; */
+  align-self: center;
+  font-size: 2.5rem;
+}
+.copy > * {
+  margin: 0.5rem 0;
+}
+.copy .head {
+  color: var(--copy);
+  font-weight: var(--bold-f);
+  font-size: 50%;
+}
+.copy .title {
+  /* color: var(--copy); */
+  font-size: 150%;
+  font-weight: var(--bold-f);
+}
+.copy .description {
+  /* color: var(--copy); */
+  font-size: 40%;
+
+  /* font-weight: var(--bold-f); */
+}
+.copy .btn {
+  font-size: 40%;
+  letter-spacing: 0.05em;
+  color: white;
+  background-color: black;
+}
+
+.hero {
+  /* grid-area: "hero"; */
+  align-self: stretch;
+  width: 100%;
+}
+.hero img {
+  width: 60%;
+}
+
+.menu {
+  background-color: chocolate;
+}
+
+.contact {
+  background-color: blue;
+}
+
+.footer {
+  height: var(--section-height);
+  background-color: var(--sec-color);
+}
+
+.main-content {
+  height: calc(100vh - var(--section-height) - var(--section-height));
+  border: red 1px solid;
+}
+.container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.flex-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn {
+  cursor: pointer;
+  font-family: var(--title-f);
+  padding: 1em 2em;
+  border-radius: 2em;
+  border: none;
+  z-index: 1;
+  box-shadow: var(--shadow);
+  transition: all 200ms ease-out;
+}
+
+.btn:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.none {
+  display: none;
+}
+
+
+
